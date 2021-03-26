@@ -150,8 +150,10 @@ function Reply() {
         tip('搜索成功')
         setDisplayBtn(true);
         chatMessage = res.data.data[0];
-        let message = chatMessage.arr.map((item) => {
-          return <div key={item.answer}>
+        let message = null;
+        let number = 0;
+           message = chatMessage.arr.map((item) => {
+          return <div key={item.answer+ (number++)}>
             <ListItem >
               {item.type === 0 ? <ListItemAvatar class='m-0'>
                 <Avatar   >
