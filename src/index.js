@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Example from './hook';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { HashRouter  as Router, Route, Link, Switch } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
@@ -17,13 +17,14 @@ import Reply from './reply';
 ReactDOM.render(
   <React.Fragment>
   <CssBaseline />
-  <Container maxWidth='xs' className='bg-gray-300 h-full ' style={{minHeight: '100vh', 'boxSizing':'border-box', 'overflow-x':'hidden'}}   >
+  <Container maxWidth='xs' className='bg-gray-300 h-full ' style={{minHeight: '100vh', 'boxSizing':'border-box','overflowX':'hidden'}}   >
   <Router>
 
 <Switch>
 <Route exact path='/' component={Example}/>
-<Route exact path="/comment" component={Comment} />
-  <Route exact path="/reply" component={Reply} />
+<Route exact path='/cs/' component={Example}/>
+<Route exact path="/cs/comment" component={Comment} />
+  <Route exact path="/cs/reply" component={Reply} />
 </Switch>
 </Router>
 

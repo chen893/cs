@@ -3,8 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import Icon from '@material-ui/core/Icon';
-import SaveIcon from '@material-ui/icons/Save';
+
 import axios from 'axios';
 import Snackbar from '@material-ui/core/Snackbar';
 import Slide from '@material-ui/core/Slide';
@@ -65,7 +64,7 @@ function Comment (){
     setOpen(false);
   };
   return (
-    <form className={classes.root} noValidate autoComplete="off">
+    <form className={classes.root} noValidate autoComplete="off"  style={{'marginTop':'30vh'}}>
       <div className='flex flex-col '  style={{'alignItems':'center','alignItems':'center'}}>
         <TextField
           id="standard-multiline-flexible"
@@ -97,7 +96,7 @@ function Comment (){
       >
         Save
       </Button> */}
-      <Button variant="contained" color="primary" onClick = {addUser} size='small' className='mt-16' style={{'margin':'20px',}}>
+      <Button variant="contained" color="primary" onClick = {addUser} size='small' className='mt-16' style={{'margin':'20px','width':'30vw'}}>
         提交
       </Button>
       <Snackbar

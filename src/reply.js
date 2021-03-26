@@ -130,7 +130,11 @@ function Reply() {
       })
   }
   const searchAnswer = () => {
-
+    if(!userName){
+      setDisplayBtn(false)
+      tip('没有该用户')
+      return;
+    }  
     axios({
       method: 'post',
       url: 'http://121.4.183.85:3066/comment/answer',
@@ -191,7 +195,7 @@ function Reply() {
       })
   }
   return (
-    <div className='flex flex-col align-bottom' style={{'align-items':'center'}} >
+    <div className='flex flex-col align-bottom' style={{'align-items':'center',}} >
       <Paper component="form" className={classes1.root }>
 
         <InputBase
